@@ -16,4 +16,6 @@ class Payment:
         return self._name
 
     def print_payment(self, custom_data):
+        if custom_data is None:
+            return "Payment for " + self.get_name() + " in the amount of " + str(self.get_amt()) + " "
         return "Payment for " + self.get_name() + " in the amount of " + str(self.get_amt()) + " " + custom_data

@@ -7,7 +7,7 @@ class Check(Payment):
         self._acc_num = acc_num
         self._routing_num = routing_num
         self._acc_name = acc_name
-        super.__init__(name, amt)
+        super().__init__(name, amt)
 
     def set_acc_name(self, acc_name):
         self._acc_num = acc_name

@@ -15,5 +15,5 @@ class Cash(Payment):
 
     def print_payment(self):
         custom_data = "Cash Payment setup for location: " + self.get_location()
-        super().print_payment(custom_data)
+        return super().print_payment(custom_data)
 
