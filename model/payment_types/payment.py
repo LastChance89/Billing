@@ -15,5 +15,5 @@ class Payment:
     def get_name(self):
         return self._name
 
-    def print_payment(self):
-        return "Payment Name " + self.get_name() + " " + str(self.get_amt())
+    def print_payment(self, custom_data):
+        return "Payment for " + self.get_name() + " in the amount of " + str(self.get_amt()) + " " + custom_data

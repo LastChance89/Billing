@@ -8,4 +8,4 @@ if __name__ == '__main__':
 
     credit = factory.create_payment(user_input)
 
-    credit.print_payment()
+    print(credit.print_payment())

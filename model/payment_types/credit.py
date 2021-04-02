@@ -17,4 +17,6 @@ class Credit(Payment):
         return self._credit_max
 
     def print_payment(self):
-        print("Credit info " + super().print_payment() + " " + str(self.get_credit_max()))
+        credit_payment = "has been processed. You have used " + str(self.get_credit_max()) + " out of a max of " + \
+                         str(self.get_credit_max()) + " credit remaining"
+        return super().print_payment(credit_payment)
