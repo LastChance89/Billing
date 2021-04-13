@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Payment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script type=text/javascript src="{{url_for('static', filename='scripts/jquery.js') }}"></script>
+    <script type= "module" src="{{url_for('static', filename='scripts/payment.js') }}"></script>
+
+</head>
+<body>
+    <form id="paymentForm" onsubmit="change_options()" >
+        <div>
+            <div>
+                <label>Select Payment Type</label>
+            </div>
+            <div>
+                <select id="paymentOptions"> 
+                    <option value = "payment">Unspecified payment type</option>
+                    <option value = "credit"> credit</option>
+                    <option value = "check"> check</option>
+                    <option value = "cash"> cash</option>
+                </select>
+            </div>
+        </div>
+
+    <button id="submit">Submit </button>
+
+<div id="paymentFields">
+    <div>
+        <label>Payment Name</label>
+    </div>
+    <div>
+        <input type = "text" id = "paymentName" placeholder="Payment Name">
+    </div>
+    <div>
+        <label>Payment Amount</label>
+    </div>
+    <div> 
+        <intput type="text" id="paymentAmount" placeholder = "0.00">
+    </div>
+
+</div>
+<div style="display: none;"  id="creditFields">
+    <p>credit</p>
+</div>
+<div style="display: none;"  id="checkFields">
+    <p>check</p>
+</div>
+
+<div style="display: none;" id="cashFields">
+    <p>cash</p>
+</div>
+
+<!--
+user_input = '{"type":"credit", "name":"Water", "amt":550,"credit_max":9000, "card_no":123456, ' \'"exp_date":"01/11/1111", "sec_code":999} '
+user_input = '{"type":"check", "name":"Electric", "amt":550, "acc_num":44444, "routing_num":123456, ' \'"acc_name": "Generic"} '
+user_input = '{"type":"cash", "name":"Food", "amt":550,"location":"Generic Location"}'
+user_input = '{"type":"payment", "name":"Random", "amt":550} '
+
+-->
+
+
+
+    </form>
+</body>
+</html>
