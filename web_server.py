@@ -22,6 +22,7 @@ def regester_endpoints():
 
 
 if __name__ == '__main__':
-    app.run()
     regester_endpoints()
+    app.run()
+
 

@@ -7,9 +7,10 @@ $("#paymentOptions").on("change",change_options);
 function create_payment(e){
     e.preventDefault();
     $(document).ready(()=>{
-        setupAjax("/payment/create", "{'tst':'bleh'}");
+        console.log()
+        setupAjax("/payment/create", {"type":$("#paymentOptions").val(),"name":$("#paymentName").val(), "amt":$("#paymentAmount").val()});
         $.ajax().then((data=>{
-            console.log("HIT!")
+
         }))
     });
 }

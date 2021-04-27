@@ -1,9 +1,12 @@
 from flask import Blueprint
-from factory.payment_factory import PaymentFactory
+from service import paymentService
+from flask import request
 
 blueprint = Blueprint('payment', __name__)
 
 
 @blueprint.route('/payment/create', methods=('POST',))
 def create_payment():
-    print("BLEH")
+    data = request.get_json()
+    return paymentService.create_payment(data)
+

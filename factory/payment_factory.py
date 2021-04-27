@@ -8,7 +8,7 @@ class PaymentFactory:
 
     def create_payment(self, user_input):
         try:
-            user_input = json.loads(user_input)
+            #user_input = json.loads(user_input) Have to fix tests now
             if user_input["type"] == "credit":
                 return Credit(user_input["name"], user_input["amt"], user_input["credit_max"], user_input["card_no"],
                               user_input["exp_date"],user_input["sec_code"])
